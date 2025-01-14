@@ -176,16 +176,4 @@ public interface ComplaintService {
    */
   ImageUploadResult uploadResponseImage(InputStream inputStream, String fileName) throws WxPayException, IOException;
 
-  /**
-   * <pre>
-   * 更新退款审批结果
-   * 文档详见: <a href="https://pay.weixin.qq.com/docs/merchant/apis/consumer-complaint/complaints/update-refund-progress.html">...</a>
-   * 接口链接：/v3/merchant-service/complaints-v2/{complaint_id}/update-refund-progress
-   * </pre>
-   *
-   * @param request
-   * @throws WxPayException
-   */
-  void updateRefundProgress(UpdateRefundRequest request) throws WxPayException;
-
 }

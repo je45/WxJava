@@ -157,11 +157,4 @@ public class ComplaintServiceImpl implements ComplaintService {
     }
   }
 
-  @Override
-  public void updateRefundProgress(UpdateRefundRequest request) throws WxPayException {
-    String url = String.format("%s/v3/merchant-service/complaints-v2/%s/update-refund-progress", this.payService.getPayBaseUrl(),request.getComplaintId());
-    request.setComplaintId(null);
-    this.payService.postV3(url, GSON.toJson(request));
-  }
-
 }
